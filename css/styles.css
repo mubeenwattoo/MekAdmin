@@ -2501,7 +2501,7 @@ figcaption {
 }
 
 .container.capabilities {
-  height: 400vh;
+  height: 180vh;
   direction: rtl;
 }
 
@@ -2547,14 +2547,27 @@ figcaption {
 }
 
 .section2.hero {
-  background-image: url("../images/phone_image.png");
-  background-size: contain;
-  background-repeat: no-repeat;
+  position: relative;
   background-color: var(--secondary);
-  background-position: right;
   color: var(--background);
   padding-top: 13rem;
   overflow: hidden;
+}
+
+.section2.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url("../images/phone_image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  opacity: 1;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 0;
 }
 
 .section.capabilities {
@@ -4080,6 +4093,11 @@ figcaption {
 
   .button.submit {
     height: 3rem;
+  }
+  .section2.hero::before {
+    opacity: 0.5; /* Adjust to your liking */
+    background-size: cover;
+    background-position: center;
   }
 
   .container.hero {

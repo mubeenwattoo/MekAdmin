@@ -33,12 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.addEventListener("click", function (e) {
-    if (!dropdown.contains(e.target) && !trigger.contains(e.target)) {
-      closeDropdown();
-    }
-  });
-
   const innerLinks = dropdown.querySelectorAll(".nav-link, .cta");
   innerLinks.forEach((link) => {
     link.addEventListener("click", () => {
