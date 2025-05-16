@@ -4513,6 +4513,7 @@ figcaption {
 @media (max-width: 768px) {
   .hero-left-side {
     margin-left: 0;
+    align-items: center;
   }
   .section2.hero {
     background-position: center;
